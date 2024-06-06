@@ -1,0 +1,2 @@
+# Introduction
+SQL is an essential tool for managing and analyzing data in modern applications and enterprises due to its simplicity, compatibility, scalability, data integrity, security, and powerful querying capabilities. Learning SQL is crucial for anyone aspiring to work as a data analyst. In this project, I utilized a dataset compiled by lukebarousse, which provides details about job postings for various data-related roles in the year 2023.
