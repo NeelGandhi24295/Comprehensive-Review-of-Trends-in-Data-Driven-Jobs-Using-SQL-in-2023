@@ -125,3 +125,12 @@ GROUP BY skills_dim.skill_id
 HAVING COUNT(skills_job_dim.job_id) > 10
 ORDER BY avg_salary DESC , demand_count DESC;
 ```
+
+# What I Learned
+In my journey, I've ramped up my SQL arsenal with formidable skills:
+
+**Advanced Query Crafting**: Expertly merge tables and utilize WITH clauses for sophisticated temp table operations.
+
+**Data Aggregation**: Mastered GROUP BY and wild aggregate functions like COUNT() and AVG() to summarize data effectively.
+
+**Analytical Mastery**: Elevated my problem-solving abilities, transforming inquiries into actionable SQL solutions that provide valuable insights.
