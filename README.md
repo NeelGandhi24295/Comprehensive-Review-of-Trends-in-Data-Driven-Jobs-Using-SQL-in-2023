@@ -18,7 +18,7 @@ SQL is indispensable for data management and analysis in today's applications an
 # Analysis
 Each query in this project was designed to explore particular aspects of the data analyst job market. Here's my approach to each question
 
-#### 1. Top Paying Data Analyst Jobs
+### 1. Top Paying Data Analyst Jobs
 
 To pinpoint the top-paying roles, I filtered remote data analyst positions by average yearly salary and location. This query illuminates lucrative opportunities in the field.
 
@@ -41,4 +41,87 @@ WHERE
 ORDER BY
     salary_year_avg DESC
 LIMIT 10;
+```
+### 2. Skills for Top Paying Jobs
+
+``` SQL
+SELECT 
+    sjd.job_id,
+    sd.skills,
+    sd.type,
+    cd.name,
+    jpf.salary_year_avg,
+    jpf.job_title_short
+FROM
+    skills_job_dim AS sjd
+        INNER JOIN
+    job_postings_fact AS jpf ON jpf.job_id = sjd.job_id
+        INNER JOIN
+    skills_dim AS sd ON sd.skill_id = sjd.skill_id
+        INNER JOIN
+    company_dim AS cd ON cd.company_id = jpf.company_id
+WHERE
+    jpf.job_title_short = 'Data Analyst'
+        AND jpf.salary_year_avg IS NOT NULL
+        AND jpf.job_location = 'Anywhere'
+ORDER BY jpf.salary_year_avg DESC
+LIMIT 10;
+```
+
+### 3. In-Demand Skills for Data Analysts
+``` SQL
+SELECT 
+    skills, COUNT(skills_job_dim.job_id) AS demand_count
+FROM
+    job_postings_fact
+        INNER JOIN
+    skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
+        INNER JOIN
+    skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+WHERE
+    job_title_short = 'Data Analyst'
+GROUP BY skills
+ORDER BY demand_count DESC
+LIMIT 5;
+```
+### 4. Skills Based on Salary
+
+```sql
+SELECT 
+    skills,
+    ROUND(AVG(salary_year_avg), 0) AS avg_salary,
+    COUNT(skills_job_dim.job_id) AS demand_count
+FROM
+    job_postings_fact
+        INNER JOIN
+    skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
+        INNER JOIN
+    skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+WHERE
+    job_title_short = 'Data Analyst'
+        AND salary_year_avg IS NOT NULL
+GROUP BY skills
+ORDER BY demand_count DESC , avg_salary DESC
+LIMIT 25;
+```
+### 5. Most Optimal Skills to Learn
+``` sql
+SELECT 
+    skills_dim.skill_id,
+    skills_dim.skills,
+    COUNT(skills_job_dim.job_id) AS demand_count,
+    ROUND(AVG(job_postings_fact.salary_year_avg),
+            0) AS avg_salary
+FROM
+    job_postings_fact
+        INNER JOIN
+    skills_job_dim ON skills_job_dim.job_id = job_postings_fact.job_id
+        INNER JOIN
+    skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+WHERE
+    job_title_short = 'Data Analyst'
+        AND salary_year_avg IS NOT NULL
+GROUP BY skills_dim.skill_id
+HAVING COUNT(skills_job_dim.job_id) > 10
+ORDER BY avg_salary DESC , demand_count DESC;
 ```
