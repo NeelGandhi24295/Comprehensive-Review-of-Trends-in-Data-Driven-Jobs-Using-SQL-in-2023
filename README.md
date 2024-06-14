@@ -14,6 +14,7 @@ SQL is indispensable for data management and analysis in today's applications an
 # Tools USED
 - **MY SQL Workbench**: The cornerstone of my analysis, enabling me to query the database and unveil pivotal insights.
 - **Git & GitHub**: Essential for sharing my SQL scripts and analysis.
+- **Pandas & Matplotlib**: Data visualization for the project was realized using this most in-demand Python libraries.
 
 # Analysis
 Each query in this project was designed to explore particular aspects of the data analyst job market. Here's my approach to each question
