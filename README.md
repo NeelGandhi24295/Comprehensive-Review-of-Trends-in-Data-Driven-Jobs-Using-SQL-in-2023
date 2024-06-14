@@ -20,7 +20,7 @@ Each query in this project was designed to explore particular aspects of the dat
 
 ### 1. Top Paying Data Analyst Jobs
 
-To pinpoint the top-paying roles, I filtered remote data analyst positions by average yearly salary and location. This query illuminates lucrative opportunities in the field.
+To pinpoint the top-paying roles, I filtered data analyst positions by average yearly salary and location. This query illuminates lucrative opportunities in the field.
 
 ``` sql
 SELECT	
@@ -42,11 +42,15 @@ ORDER BY
     salary_year_avg DESC
 LIMIT 10;
 ```
+Here are observations from the top 10 data analyst job roles based on salary in 2023
+
 * **Salary Range Variation**: The top 10 highest-paying data analyst roles in 2023 offer a wide salary range, ranging from $184,000 to $650,000. This underscores the significant earning potential within the field.
 
-* **Diverse Employers**: Major companies such as SmartAsset, Meta, and AT&T are among those offering lucrative salaries, highlighting the diverse range of employers across various industries that value data analytics expertise.
+* **Diverse Employers**: Major companies such as SmartAsset, Meta, and AT&T offer lucrative salaries, highlighting the diverse range of employers across various industries that value data analytics expertise.
 
 * **Job Title Diversity**: The job titles within the top-paying data analyst roles vary greatly, ranging from Data Analyst to Director of Analytics. This diversity reflects the broad spectrum of roles and specializations available within the field of data analytics.
+
+  
 ### 2. Skills for Top Paying Jobs
 
 ``` SQL
