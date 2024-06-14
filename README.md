@@ -85,6 +85,7 @@ Based on the top 10 highest-paying data analyst jobs in 2023, the most demanded 
 ![Skill count for 10 Top Paying Roles](SQL_JOB_POSTINGS_PROJECT/Skill_count_top_paying_jobs.png)
  
 ### 3. In-Demand Skills for Data Analysts
+This query aided in pinpointing the skills that appear most frequently in job postings, guiding attention towards skills one must acquire for the data analyst role.
 ``` SQL
 SELECT 
     skills, COUNT(skills_job_dim.job_id) AS demand_count
@@ -100,8 +101,23 @@ GROUP BY skills
 ORDER BY demand_count DESC
 LIMIT 5;
 ```
-### 4. Skills Based on Salary
+Here’s a look at the most in-demand skills for data analysts in 2023.
 
+* SQL and Excel retain their foundational importance, highlighting the necessity for robust skills in data processing and spreadsheet management.
+
+* Programming languages and visualization tools such as Python, Tableau, and Power BI are indispensable, pointing to the growing significance of technical proficiencies in data narration and decision-making support.
+
+| Skills     | Demand Count |
+|------------|--------------|
+| SQL        | 7291         |
+| Excel      | 4611         |
+| Python     | 4330         |
+| Tableau    | 3745         |
+| Power BI   | 2609         |
+
+
+### 4. Skills Based on Salary
+This breakdown will help you understand the skills you need to secure a high-paying salary, to stand out in the competitive market for data analyst positions.
 ```sql
 SELECT 
     skills,
@@ -120,6 +136,21 @@ GROUP BY skills
 ORDER BY demand_count DESC , avg_salary DESC
 LIMIT 25;
 ```
+Here's a breakdown of the results for top paying skills for Data Analysts:
+
+| Skills        | Average Salary ($) |
+|---------------|--------------------|
+| pyspark       | 208,172            |
+| bitbucket     | 189,155            |
+| couchbase     | 160,515            |
+| watson        | 160,515            |
+| datarobot     | 155,486            |
+| gitlab        | 154,500            |
+| swift         | 153,750            |
+| jupyter       | 152,777            |
+| pandas        | 151,821            |
+| elasticsearch | 145,000            |
+
 ### 5. Most Optimal Skills to Learn
 ``` sql
 SELECT 
@@ -152,4 +183,4 @@ In my journey, I've ramped up my SQL arsenal with formidable skills:
 **Analytical Mastery**: Elevated my problem-solving abilities, transforming inquiries into actionable SQL solutions that provide valuable insights.
 
 ### Closing Remarks
-This project has been instrumental in elevating my SQL expertise and offering profound insights into the data analyst job landscape. The analysis outcomes serve as a compass for directing skill enhancement and job pursuit endeavours. Aspiring data analysts can strategically navigate a competitive job market by honing sought-after, high-paying skills. This journey underscores the significance of perpetual learning and staying attuned to evolving trends within the realm of data analytics.
+This project has been instrumental in elevating my SQL expertise and offering profound insights into the data analyst job landscape. The analysis outcomes are a compass for directing skill enhancement and job pursuit endeavours. Aspiring data analysts can strategically navigate a competitive job market by honing sought-after, high-paying skills. This journey underscores the significance of perpetual learning and staying attuned to evolving trends within the realm of data analytics.
