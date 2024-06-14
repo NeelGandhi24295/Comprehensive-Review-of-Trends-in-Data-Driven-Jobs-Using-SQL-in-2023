@@ -53,7 +53,7 @@ Here are observations from the top 10 data analyst job roles based on salary in 
 
   
 ### 2. Skills for Top Paying Jobs
-
+To grasp the essential skills for the highest-paying positions, I merged job postings with skill data, offering insights into the attributes that employers prioritize for well-compensated roles.
 ``` SQL
 SELECT 
     sjd.job_id,
