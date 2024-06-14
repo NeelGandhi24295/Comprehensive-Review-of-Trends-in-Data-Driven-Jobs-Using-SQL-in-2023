@@ -195,7 +195,13 @@ ORDER BY avg_salary DESC , demand_count DESC;
 | 233      | jira        | 20           | 104,918            |
 
 Here's a breakdown of the most optimal skills for Data Analysts in 2023:
+* In the realm of **programming languages**, Python and R continue to dominate, with 236 and 148 mentions, respectively, in job postings. Despite their prevalence, the average salaries for Python and R hover around $101,397 and $100,499, respectively, suggesting a balance between demand and availability of skills.
 
+*  **Cloud technologies ** are experiencing a surge in demand, particularly with platforms like Snowflake, Azure, AWS, and BigQuery. Professionals with expertise in these areas command relatively high salaries, underlining the increasing significance of cloud platforms and big data solutions in data analysis.
+
+*  **Business intelligence (BI) and visualization tools ** like Tableau and Looker are essential for deriving actionable insights from data. With 230 mentions, Tableau remains a frontrunner, while Looker follows with 49 mentions. The average salaries for these roles range from $99,288 to $103,795, emphasizing the critical role of visualization in data-driven decision-making.
+
+*  **Database technologies **, both traditional (such as Oracle and SQL Server) and NoSQL, continue to be indispensable for data storage and retrieval. Professionals skilled in these areas command average salaries ranging from $97,786 to $104,534, highlighting the enduring need for robust data management solutions.
 
 # What I Learned
 In my journey, I've ramped up my SQL arsenal with formidable skills:
