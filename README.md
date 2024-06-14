@@ -42,6 +42,7 @@ ORDER BY
     salary_year_avg DESC
 LIMIT 10;
 ```
+![Top Paying Roles](SQL_JOB_POSTINGS_PROJECT/1_top_paying_roles.png)
 Here are observations from the top 10 data analyst job roles based on salary in 2023
 
 * **Salary Range Variation**: The top 10 highest-paying data analyst roles in 2023 offer a wide salary range, ranging from $184,000 to $650,000. This underscores the significant earning potential within the field.
