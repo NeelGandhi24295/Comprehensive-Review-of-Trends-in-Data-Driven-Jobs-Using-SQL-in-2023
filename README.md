@@ -136,7 +136,6 @@ GROUP BY skills
 ORDER BY demand_count DESC , avg_salary DESC
 LIMIT 25;
 ```
-Here's a breakdown of the results for top paying skills for Data Analysts:
 
 | Skills        | Average Salary ($) |
 |---------------|--------------------|
@@ -151,7 +150,16 @@ Here's a breakdown of the results for top paying skills for Data Analysts:
 | pandas        | 151,821            |
 | elasticsearch | 145,000            |
 
+It's fascinating how the landscape of technology careers continues to evolve, with certain skill sets becoming increasingly valuable and sought after. 
+
+* Proficiency in big data technologies like PySpark and Couchbase, along with machine learning tools such as DataRobot and Jupyter, certainly commands attention, given the industry's emphasis on data processing and predictive modelling.
+
+* Moreover, the intersection of software development and data analysis is becoming more pronounced, with a premium placed on individuals who can navigate both realms effectively. Skills in development and deployment tools like GitLab, Kubernetes, and Airflow signify a valuable crossover between data analysis and engineering, emphasizing the importance of automation and streamlined data pipeline management.
+
+*Cloud computing expertise is another area of growing significance in the realm of data analytics. As more organizations transition to cloud-based environments for their analytics needs, familiarity with cloud and data engineering tools like Elasticsearch, Databricks, and GCP becomes increasingly valuable. Indeed, proficiency in these areas can significantly enhance one's earning potential in the field of data analytics.
+
 ### 5. Most Optimal Skills to Learn
+This query sought to identify skills that are not only in high demand but also command top salaries, providing valuable direction for skill development. By analyzing demand and salary data, the goal was to pinpoint areas where investing in expertise could yield significant career returns.
 ``` sql
 SELECT 
     skills_dim.skill_id,
@@ -172,6 +180,22 @@ GROUP BY skills_dim.skill_id
 HAVING COUNT(skills_job_dim.job_id) > 10
 ORDER BY avg_salary DESC , demand_count DESC;
 ```
+
+| Skill ID | Skills      | Demand Count | Average Salary ($) |
+|----------|-------------|--------------|--------------------|
+| 8        | go          | 27           | 115,320            |
+| 234      | confluence  | 11           | 114,210            |
+| 97       | hadoop      | 22           | 113,193            |
+| 80       | snowflake   | 37           | 112,948            |
+| 74       | azure       | 34           | 111,225            |
+| 77       | bigquery    | 13           | 109,654            |
+| 76       | aws         | 32           | 108,317            |
+| 4        | java        | 17           | 106,906            |
+| 194      | ssis        | 12           | 106,683            |
+| 233      | jira        | 20           | 104,918            |
+
+Here's a breakdown of the most optimal skills for Data Analysts in 2023:
+
 
 # What I Learned
 In my journey, I've ramped up my SQL arsenal with formidable skills:
