@@ -77,7 +77,13 @@ WHERE
 ORDER BY jpf.salary_year_avg DESC
 LIMIT 10;
 ```
+Based on the top 10 highest-paying data analyst jobs in 2023, the most demanded skills are:
 
+* **SQL** is the leader with a count of 8
+* **Python** is the most in-demand programming language with a count of 7
+* **Tableau** is also the most sought-after visualization tool for the role, with a count of 6. Other skills such as R, Snowflake, Pandas, and Excel demonstrate diverse demand levels.
+![Skill count for 10 Top Paying Roles](SQL_JOB_POSTINGS_PROJECT/Skill_count_top_paying_jobs.png)
+ 
 ### 3. In-Demand Skills for Data Analysts
 ``` SQL
 SELECT 
